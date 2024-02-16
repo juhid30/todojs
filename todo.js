@@ -1,4 +1,5 @@
-var item= document.querySelector("#item");
+/* const itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+ */var item= document.querySelector("#item");
 var todobox= document.querySelector("#todolist");
 var addbtn= document.querySelector("#btn1");
 
@@ -11,20 +12,34 @@ btn1.addEventListener("click",function(){
 })
 
 const addtask= (item)=>{
+ /*  itemsArray.push(item.value);
+  localStorage.setItem('items', JSON.stringify(itemsArray));
+  location.reload(); */
 const listitem=document.createElement("li");
 listitem.innerHTML=`
-        ${item}
-            <img src="crossnew.png" />
-          </li>`;
+<div id="listit">
 
+        ${item}
+        </div>
+        <div id="modify">
+              
+              <img id="editpic" src="edit.png" />
+              <img class="cross" src="newcross.jpg" />
+            </div>
+          </li>`;
+          
           listitem.addEventListener("click",
           function(){
             listitem.classList.toggle("done");
           })
-          listitem.querySelector("img").addEventListener(
+          listitem.querySelector(".cross").addEventListener(
             "click",
           function(){
+           /*  itemsArray.splice(i,1);
+  localStorage.setItem('items', JSON.stringify(itemsArray));
+  location.reload(); */
             listitem.remove();
+            
         })
 
       /*   listitem.querySelector("#btn2").addEventListener("click", function(){

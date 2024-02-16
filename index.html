@@ -5,23 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
     <link rel="stylesheet" href="todo.css" />
+    <script
+      src="https://kit.fontawesome.com/986d51717c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <main>
-      <div class="box">
-        <h2>To-Do List</h2>
-        <input type="text" placeholder="Write your task here" id="item" />
-        <input type="button" value="Add" id="btn1" />
-
+    <div id="container">
+      <div id="inputs">
+        <div id="heading">
+          <h2>To-Do List</h2>
+          <i class="fa-solid fa-pen" style="color: #2d3250"></i>
+        </div>
+        <div id="inputbox">
+          <input type="text" placeholder="Write your task here" id="item" />
+          <input type="button" value="Add" id="btn1" />
+        </div>
+      </div>
+      <div id="listcont">
         <ul id="todolist">
           <li>
-            Create project
-            <img src="crossnew.png" />
-            <input type="button" value="edit" id="btn2" />
+            <div id="listit">
+              <!-- <i id="check" class="fa-regular fa-circle"></i> -->
+
+              Create project
+            </div>
+            <div id="modify">
+              <!-- <input type="button" value="Edit" id="btn2" /> -->
+              <img id="editpic" src="edit.png" />
+              <img class="cross" src="newcross.jpg" />
+            </div>
           </li>
         </ul>
       </div>
-    </main>
+    </div>
     <script src="todo.js"></script>
   </body>
 </html>
+
+<!-- <div id="container">
+  <div id="inputs">
+    <div id="heading">
+      <h2>To-Do List</h2>
+      <i class="fa-solid fa-pen" style="color: #2d3250"></i>
+    </div>
+    <div id="inputbox">
+      <input type="text" id="inputtext" placeholder="Write your task" />
+      <input type="button" id="addbtn" value="Add" />
+    </div>
+  </div>
+  <div id="listcont">
+    <ul id="listitem">
+      <div>
+        <li id="listdisplay">
+          <i id="check" class="fa-regular fa-circle"></i>
+
+          Create a Project
+          <div id="modify">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <i class="fa-solid fa-circle-xmark"></i>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>*/
+ -->
