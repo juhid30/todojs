@@ -3,71 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="todo.css" />
-    <script
-      src="https://kit.fontawesome.com/986d51717c.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="list.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <div id="container">
-      <div id="inputs">
-        <div id="heading">
-          <h2>To-Do List</h2>
-          <i class="fa-solid fa-pen" style="color: #2d3250"></i>
-        </div>
-        <div id="inputbox">
-          <input type="text" placeholder="Write your task here" id="item" />
-          <input type="button" value="Add" id="btn1" />
+    <main>
+      <div id="msg">
+        <h1>Welcome user</h1>
+        <h3 id="todaydate"></h3>
+        <div id="inputareas">
+          <input type="text" placeholder="Create Task" id="item" />
+          <input type="button" id="add" />
+          <img src="add1.png" id="addbtn" />
         </div>
       </div>
-      <div id="listcont">
-        <ul id="todolist">
-          <li>
-            <div id="listit">
-              <!-- <i id="check" class="fa-regular fa-circle"></i> -->
-
-              Create project
-            </div>
-            <div id="modify">
-              <!-- <input type="button" value="Edit" id="btn2" /> -->
-              <img id="editpic" src="edit.png" />
-              <img class="cross" src="newcross.jpg" />
-            </div>
-          </li>
+      <div id="cont">
+        <ul>
+          <div class="listele">
+            <li>
+              <input type="checkbox" id="check" />
+              <textarea rows="1" cols="60">Create Project</textarea>
+              <img src="save.png" id="savebtn" width="25px" height="25px" />
+              <img src="edit.png" id="ellipsis" width="25px" height="25px" />
+              <input type="button" id="editbtn" value="Edit" />
+              <input type="button" value="Delete" id="deletebtn" />
+            </li>
+          </div>
         </ul>
       </div>
-    </div>
-    <script src="todo.js"></script>
+    </main>
+    <script src="todolist.js"></script>
   </body>
 </html>
-
-<!-- <div id="container">
-  <div id="inputs">
-    <div id="heading">
-      <h2>To-Do List</h2>
-      <i class="fa-solid fa-pen" style="color: #2d3250"></i>
-    </div>
-    <div id="inputbox">
-      <input type="text" id="inputtext" placeholder="Write your task" />
-      <input type="button" id="addbtn" value="Add" />
-    </div>
-  </div>
-  <div id="listcont">
-    <ul id="listitem">
-      <div>
-        <li id="listdisplay">
-          <i id="check" class="fa-regular fa-circle"></i>
-
-          Create a Project
-          <div id="modify">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <i class="fa-solid fa-circle-xmark"></i>
-          </div>
-        </li>
-      </div>
-    </ul>
-  </div>
-</div>*/
- -->
