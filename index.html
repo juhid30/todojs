@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -28,10 +29,10 @@ Create Project
           <div class="edit-controllers">
 
             <button class="edit">
-              <img src="icons/edit.png" />
+              <img src="icons/edit.png" class="edit-btn" />
             </button>
-            <button class="bin">
-              <img src="icons/bin.png" />
+            <button class="bin" id="bin">
+              <img src="icons/bin.png" id="binImg"/>
             </button>
           </div>
         </div>
@@ -39,34 +40,37 @@ Create Project
      
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
-      <div class="modal-content">
+<div id="createModal" class="create-modal">
+      <div class="create-modal-content">
         
         
-        <input type="text" id="inp-text" placeholder="Write Task here">
-        <input type="time" id="time-input">
+        <input type="text" id="createmodal-inp-text" placeholder="Write Task here">
+        <input type="time" id="createmodal-time-input">
     
         
-        <button id="savebtn">Save
+        <button id="createmodal-savebtn">Save
         </button>
-        <button class="cancel">Cancel</button>
+        <button class="createmodal-cancel">Cancel</button>
       
       </div>
     </div>
-    <div id="myModal2" class="modal2">
-      <div class="modal2-content">
-        <input type="text" id="inp-text2" placeholder="Write Task here">
-        <input type="time" id="time-input2">
+    
+    <div id="editModal" class="edit-modal">
+      <div class="edit-modal-content">
+        
+        
+        <input type="text" id="editmodal-inp-text" placeholder="Write Task here">
+        <input type="time" id="editmodal-time-input">
     
         
-        <button id="savebtn2">Save
+        <button id="editmodal-savebtn">Save
         </button>
-        <button class="cancel2">Cancel</button>
+        <button class="editmodal-cancel">Cancel</button>
       
       </div>
-        </div>
+    </div>
 
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
