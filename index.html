@@ -4,39 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-    <link rel="stylesheet" href="list.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <div id="msg">
-        <h1>Welcome user</h1>
-        <h3 id="todaydate"></h3>
-        <div id="inputareas">
-          <input type="text" placeholder="Create Task" id="item" />
-          <input type="button" id="add" />
-          <img src="add1.png" id="addbtn" />
+    <div class="wrapper-all">
+      <div class="heading-wrapper">
+        <div class="headinng-text-wrapper">
+          <h1>Good Morning, Juhi!👋🏽</h1>
+          <p id="todaydate"></p>
+        </div>
+        <button class="addbtn">Create Task</button>
+      </div>
+      <div class="list-wrapper">
+        <div class="list">
+          <div class="list-content">
+            <input type="checkbox" class="check" />
+            <p class="list-text">
+Create Project
+            
+            </p>
+          </div>
+          <div class="deadline-time">3434</div>
+          <div class="edit-controllers">
+
+            <button class="edit">
+              <img src="icons/edit.png" />
+            </button>
+            <button class="bin">
+              <img src="icons/bin.png" />
+            </button>
+          </div>
         </div>
       </div>
-      <div id="cont">
-        <ul>
-          <div class="listele">
-            <li>
-              <input type="checkbox" id="check" />
-              <textarea rows="1" cols="60">Create Project</textarea>
-              <img src="save.png" id="savebtn" width="25px" height="25px" />
-              <img src="edit.png" id="ellipsis" width="25px" height="25px" />
-              <input type="button" id="editbtn" value="Edit" />
-              <input type="button" value="Delete" id="deletebtn" />
-            </li>
-          </div>
-        </ul>
+     
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+      <div class="modal-content">
+        
+        
+        <input type="text" id="inp-text" placeholder="Write Task here">
+        <input type="time" id="time-input">
+    
+        
+        <button id="savebtn">Save
+        </button>
+        <button class="cancel">Cancel</button>
+      
       </div>
-    </main>
-    <script src="todolist.js"></script>
+    </div>
+    <div id="myModal2" class="modal2">
+      <div class="modal2-content">
+        <input type="text" id="inp-text2" placeholder="Write Task here">
+        <input type="time" id="time-input2">
+    
+        
+        <button id="savebtn2">Save
+        </button>
+        <button class="cancel2">Cancel</button>
+      
+      </div>
+        </div>
+
+
+    <script src="script.js"></script>
   </body>
 </html>

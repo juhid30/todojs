@@ -1,0 +1,221 @@
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+.wrapper-all {
+  margin: 3rem 5rem;
+}
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addbtn {
+  font-weight: 300;
+  background-color: #7155d3;
+  color: white;
+  margin-right: 150px;
+  margin-top: 50px;
+  height: 30px;
+  width: 110px;
+  border-radius: 20px;
+}
+.list-wrapper {
+  margin-left: 7rem;
+  margin-top: 55px;
+}
+.list {
+  width: 60rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 2px 5px;
+}
+.edit-controllers,
+.deadline-time,
+.check,
+.list-content,
+.list-text,
+.edit,
+.bin,
+.list {
+  background-color: white;
+}
+.list-content {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+.check {
+  accent-color: black;
+}
+.list-text {
+  width: 50rem;
+  font-size: 1.1rem;
+  color: black;
+  font-weight: bold;
+}
+.edit-controllers {
+  gap: 3px;
+  display: flex;
+  align-items: center;
+}
+.deadline-time {
+  margin-bottom: 5px;
+}
+img {
+  background-color: white;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.modal,
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content,
+.modal2-content {
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #714eb3;
+  padding: 5px 40px;
+  width: 35%;
+  height: 35%;
+  /* background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  /*  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;  */ /* Could be more or less, depending on screen size */
+}
+
+#inp-text,
+#inp-text2 {
+  margin-top: 30px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding-left: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: black;
+}
+#time-input,
+#time-input2 {
+  position: fixed;
+  top: 100px;
+  border: none;
+  color: #2a2c2d;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+input[type="time"]::-webkit-datetime-edit-text {
+  padding: 19px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+input[type="time"]::-webkit-datetime-edit-hour-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* Minute */
+input[type="time"]::-webkit-datetime-edit-minute-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* AM/PM */
+input[type="time"]::-webkit-datetime-edit-ampm-field {
+  background-color: #7155d3;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+input[type="time"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.cancel,
+#savebtn,
+.cancel2,
+#savebtn2 {
+  font-weight: 300;
+  background-color: white;
+  height: 30px;
+  width: 90px;
+  top: 150px;
+  border-radius: 20px;
+  font-weight: 400;
+  position: absolute;
+  top: 180px;
+}
+#savebtn,
+#savebtn2 {
+  right: 140px;
+}
+.cancel,
+.cancel2 {
+  right: 30px;
+}
+/* input[type="checkbox"]:checked + p.list-text {
+  text-decoration: line-through;
+} */
+@keyframes strike {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 10px;
+  background-color: blue;
+  animation: strike 1s linear forwards;
+}
