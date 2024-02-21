@@ -14,6 +14,7 @@ function updateTime() {
     "Nov",
     "Dec",
   ][today.getMonth()];
+
   var date =
     String(today.getDate()).padStart(2, "0") +
     " " +
@@ -29,6 +30,16 @@ function updateTime() {
     String(today.getMinutes()).padStart(2, "0") +
     ":" +
     String(today.getSeconds()).padStart(2, "0");
+  var str1 = time,
+    str2 = "12:00:00";
+  str3 = "18:00:00";
+  str4 = "00:00:00";
+
+  if (str1 < str2 && str1 > str4) {
+    document.querySelector("h1").innerHTML = "Good Morning, Juhi!👋🏽";
+  } else if (str1 > str2 && str1 < str3) {
+    document.querySelector("h1").innerHTML = "Good Afternoon, Juhi!👋🏽";
+  } else document.querySelector("h1").innerHTML = "Good Evening, Juhi!👋🏽";
   document.getElementById("todaydate").innerHTML =
     "Today,  " + daylist[day] + "  " + date + "<br>" + time;
 }
@@ -58,11 +69,16 @@ var todoArray = JSON.parse(localStorage.getItem("todos")) || [];
 var saveBtn = document.getElementById("createmodal-savebtn");
 
 saveBtn.onclick = function () {
-  modalToAdd.style.display = "none";
   var inputBox = document.querySelector("#createmodal-inp-text");
   var timeInput = document.querySelector("#createmodal-time-input");
-  console.log(timeInput.value);
-  addTodo(inputBox.value, timeInput.value);
+  if (inputBox.value == "" || timeInput.value == "") {
+    alert("Please enter all the details of the todo");
+  } else {
+    modalToAdd.style.display = "none";
+
+    console.log(timeInput.value);
+    addTodo(inputBox.value, timeInput.value);
+  }
 };
 
 (function () {
@@ -179,14 +195,12 @@ function deleteTodo(i) {
   updateTodosInLocalStorage();
   var elementToRemove = document.getElementById(i);
   elementToRemove.remove();
-} /* 
-function check() {
-  var todoText = document.querySelector(".list-text");
+}
+/* function check() {
+  var deadlineTime = document.querySelector(".deadline-time");
   if (document.getElementsByClassName("check").checked == true) {
-    todoText.classList.add("tododone");
-  }
-  if (document.getElementsByClassName("check").checked == false) {
-    todoText.classList.remove("tododone");
+    deadlineTime.style.cssText += "color:red;background-color:yellow";
   }
 }
-check(); */
+check();
+ */
